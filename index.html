@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Class by lzzluca</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Class</h1>
+        <p>Class function - A really light copy of the MooTools’s Class function</p>
+
+        <p class="view"><a href="https://github.com/lzzluca/Class">View the Project on GitHub <small>lzzluca/Class</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/lzzluca/Class/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/lzzluca/Class/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/lzzluca/Class">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Class function - A really light copy of the MooTools’s Class function</p>
+
+<ul>
+<li><p>Author:
+Luca Lazzarini ( <a href="mailto:lzzluca@gmail.com">lzzluca@gmail.com</a>  <a href="http://nerdstuckathome.wordpress.com/">http://nerdstuckathome.wordpress.com/</a> )</p></li>
+<li><p>License:
+Dual licensed under the MIT (<a href="http://mit-license.org/">http://mit-license.org/</a>) and GPL (<a href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>) licenses.</p></li>
+<li><p>On the web:</p></li>
+<li><p><a href="http://nerdstuckathome.wordpress.com/http://nerdstuckathome.wordpress.com/2012/11/14/a-class-function-to-define-classes-in-javascript-with-mootools-like-syntax/">http://nerdstuckathome.wordpress.com/http://nerdstuckathome.wordpress.com/2012/11/14/a-class-function-to-define-classes-in-javascript-with-mootools-like-syntax/</a></p></li>
+<li><p><a href="https://github.com/lzzluca/Class/">https://github.com/lzzluca/Class/</a></p></li>
+<li><p>Version:
+1.0</p></li>
+<li><p>Depends:
+No external dependencies</p></li>
+<li><p>Description:
+"Class" function in Javascript: it is intended to be a really light copy of the MooTools’s Class function with basic features; i am working with jQuery at the moment and i miss this amazing function!</p></li>
+<li><p>Goals:</p></li>
+<li><p>Encourage objective Javascript instead of sequential programming (!)</p></li>
+<li><p>MooTools syntax compatibility (means be allowed to move the code on MooTools or project like moo4q in the future)</p></li>
+<li><p>Get an unique class-pattern (avoiding mixed code like using prototype and closures patterns togheter)</p></li>
+<li><p>Get lighter classes by improving inheritance (using less verbose syntax and writing it as the first row of the object definition) </p></li>
+<li><p>Class powered by really light code, easy to be mantained by me (or you!)</p></li>
+<li><p>Basic functionalities: extend, implement, parent method, the function “initialize” as constructor (and as minor: setOptions)</p></li>
+<li><p>Todo:</p></li>
+<li><p>The setOptions method is missed at the moment, i think it is really useful, inside the constructor, in a lots of situations.</p></li>
+<li><p>As minor, classes from MooTools get these properties on their prototype:
+parent, $constructor
+The same properties are missed, or there are but with a different behaviour, using my Class function.
+The same is for the instances of a class defined by MooTools, they get these property (missed or not the same behaviour using mine):
+$caller, caller, $constructor, parent</p></li>
+<li><p>How to build it:
+The Makefile is in src-min/ .
+The Makefile builds all the modules in src-dev/ in one file: src-min/class-min.js ; that is the file to include in your pages.
+To build your own classes-min.js, you should know that the Makefile looks for the Google's Closure Compiler:
+<a href="https://developers.google.com/closure/compiler/">https://developers.google.com/closure/compiler/</a>
+The path of the compiler is specified by the var in the Makefile.</p></li>
+</ul><p>I wrote it in my current company, WCN (wcn.co.uk), and i was allowed to release it as open source. Thanks (particularly to Jack Hobson) you!</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/lzzluca">lzzluca</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
