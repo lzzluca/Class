@@ -1,0 +1,13 @@
+1.1:
+  Removed the folder demo: i think it was useless, a good tutorial is here:
+    http://nerdstuckathome.wordpress.com/2012/11/14/a-class-function-to-define-classes-in-javascript-with-mootools-like-syntax/
+    also the fresh added tests are a tutorial themself
+  Merged the folder src-dev and src-min in the src one, for convenience using make
+  Added tests: there is the new folder test/ (with the test sources) and the file SpecRunner.html to run them. They are designed to be runned by Jasmine, included in lib/ .
+  Added this file (changelog)
+  Added a change (as fix) on the file src/Extend.js: now, extending a class, only the functions that are defined on both sub and super, are wrapped on the sub (to allow the use of this.parent). I assume that
+    is the dafault MooTools's behaviour but more checks will follow.
+  Added few changes at the Makefile, to make it fitting the new filesystem structure; added also the labels "build", "clean" and "all" for convenience (run just "make" is enough to build, by the way...)
+  Updated the README with the new version and some changes
+
+29/11/2013: I HAD TO RESET THE GIT HISTORY: I DON'T KNOW HOW, I MANAGED TO BREAK THE MASTER HISTORY.

@@ -1,0 +1,35 @@
+Class function
+version 1.1
+from Luca Lazzarini ( lzzluca@gmail.com  http://nerdstuckathome.wordpress.com/ )
+
+Dual licensed under the MIT (MIT-LICENSE.txt)
+and GPL (GPL-LICENSE.txt) licenses.
+
+On the web:
+http://nerdstuckathome.wordpress.com/
+https://github.com/lzzluca/Class/
+
+Todo:
+Check here: http://nerdstuckathome.wordpress.com/
+
+
+* Description:
+A "Class" function to define "classes" in Javascript: a really light clone of the famous MooTools Class function.
+
+* Goals:
+- Encourage objective Javascript instead of sequential programming (!)
+- MooTools syntax compatibility (means be allowed to move the code on MooTools or project like moo4q in the future)
+- Get an unique class-pattern (avoiding mixed code like using prototype and closures patterns togheter)
+- Moving the focus from the function to the prototype, for the functions constructor modelling
+- Get lighter classes by provides tools for code reusing
+- Class powered by really light code, easy to be mantained by me (or you!)
+- Basic functionalities from MooTools: extend, implement, parent method, the function “initialize” as constructor (and as minor: setOptions)
+
+The Class declaration syntax is compatible with the MooTools one: that allows you to move your code on MooTools or on project like "moo4q" (http://moo4q.com/) .
+
+* How to build it:
+The Makefile is in the folder "src"; just run it after every changes. The Makefile builds all the modules in one file: "class-min.js". That is the file to include in your pages.
+The Makefile looks for the Google's Closure Compiler: https://developers.google.com/closure/compiler/
+Change the var COMPILER with the path of your jar in the Makefile.
+
+I wrote it in my current company, WCN (wcn.co.uk), and i was allowed to release it as open source. Thanks (particularly to Jack Hobson)!
