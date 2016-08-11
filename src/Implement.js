@@ -39,6 +39,7 @@
         this_proto[prop] = superObj[prop];
       }
       else if ( typeof this_proto[prop] == "object" && typeof superObj[prop] == "object" ) {
+        // FIXME this is wrong: if the object is a DOM element, you shouldn't clone it!
         XD.Utils.jQuery_extend(true, this_proto[prop], superObj[prop]);
       }
     }
