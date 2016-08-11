@@ -40,6 +40,7 @@
         // objects merging
 
       if ( typeof prototype[prop] == "object" && typeof this.prototype[prop] == "object" ) {
+        // FIXME this is wrong: if the object is a DOM element, you shouldn't clone it!
         XD.Utils.jQuery_extend(true, prototype[prop], this.prototype[prop]);
       }
       else {
