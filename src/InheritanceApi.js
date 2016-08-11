@@ -9,12 +9,12 @@
     var InheritanceApi = {
 
         /*
-         * @static @class Utils 
+         * @static @class Utils
          * Container of utilities needed in all InheritanceApi's modules
         */
 
         Utils: {
-
+ 
             /*
              * @static @class Prototype
              * Basic Prototype utilities
@@ -28,7 +28,7 @@
                  * @param {Object} obj The target prototype
                  * @returns {Object} The clone
                  */
-                     
+
                 clone: function(obj) {
                     if( !(obj instanceof Object) ) return obj;
                     var clone = function(){};
@@ -37,9 +37,34 @@
                 }
             },
 
+           /*
+             * name: isDOMEl
+             * @return true is the parameter is a DOM element
+             */
+
+            isDOMEl: function(o) {
+              // Returns true if it is a DOM node
+              function isNode(o){
+                return (
+                  typeof Node === "object" ? o instanceof Node :
+                  o && typeof o === "object" && typeof o.nodeType === "number" && typeof o.nodeName==="string"
+                );
+              }
+
+              // Returns true if it is a DOM element
+              function isElement(o){
+                return (
+                  typeof HTMLElement === "object" ? o instanceof HTMLElement : //DOM2
+                  o && typeof o === "object" && o !== null && o.nodeType === 1 && typeof o.nodeName==="string"
+                );
+              }
+
+              return isNode(o) || isElement(o);
+            },
+
             /*
             * name: clone
-            * Nice object cloning function from:  
+            * Nice object cloning function from:
             * http://stackoverflow.com/questions/728360/copying-an-object-in-javascript/728694#728694
             * Cloning function
             * @param {Object} The object to clone
@@ -47,12 +72,16 @@
             */
 
             clone: function(obj) {
+                if( this.isDOMEl(obj) ) {
+                  return obj;
+                }
+
                 var copy;
 
                 switch( typeof obj ) {
                     case "object":
                            if(obj == null) {
-                                copy = null;    
+                                copy = null;
                             }
                             else if(obj instanceof Date) { // handle Date
                                 copy = new Date();
@@ -73,7 +102,7 @@
                             break;
                     case "boolean": // handle immutable type and default (for example function)
                     case "string":
-                    case "number": 
+                    case "number":
                     default:
                             copy = obj;
                             break;
